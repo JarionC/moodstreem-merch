@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a,
+  link {
+    text-decoration: none;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  .nav-menu-btn {
+    display: none;
+    cursor: pointer;
+  }
+  .menuCoverClass.show{
+    background-color: rgba(0, 0, 0, 0.8);
+    top:0px;
+    transition: all 0.3s ease-in-out;
+  }
+  .menuCoverClass {
+    display: block;
+    position: fixed;
+    top:-100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    z-index: 9999;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+
+  
+  
+  .mobile-link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    
+    align-self:center;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    text-decoration: none;
+    height: 100%;
+  }
+  
+  .nav-container {
+    z-index: 10;
+    background-color: black;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px black solid;
+    transition: background-color .5s ease, color .5s ease, border-bottom .5s ease;
+  }
+  
+  .nav-container:hover {
+    background-color: white;
+    color: black;
+    border-bottom: 1px rgb(209, 209, 209) solid;
+    transition: background-color .5s ease, color .5s ease, border-bottom .5s ease;
+  }
+  
+  .nav-container > .brand {
+    text-decoration: none;
+    margin-right: auto;
+    margin-left: 20px;
+    color: inherit;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    opacity: 100%;
+    transition: opacity .3s ease;
+  }
+  
+  .brand > .logo-span {
+    display: inline-block;
+    width: 30px;
+    vertical-align: top;
+  }
+  
+  .brand > .brand-text {
+  }
+  
+  .nav-container > .link-container {
+    margin-left: auto;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+    transition: all .3s ease-in-out;
+  }
+  
+  .link-container > .link {
+    list-style: none;
+    font-weight: 500;
+    opacity: 100%;
+    transition: opacity .3s ease;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .nav-menu-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.25em;
+      cursor: pointer;
+      top: 0px;
+      font-weight: 700;
+      margin-right:2rem;
+    }
+  
+    .nav-container > .link-container{
+        opacity: 0%;
+        display:none;
+        transition: all .3s ease-in-out;
+    }
+    .link > a{
+        color: unset;
+    }
+    .mobile-link-container .link {
+      margin-bottom: 20px;
+      text-decoration: none;
+      list-style-type: none;
+      color:white;
+      font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 1.2em;
+      font-weight: 800;
+      transition: all .3 ease-in-out;
+    }
+
+    .mobile-link-container .link:hover{
+        transition: all .3 ease-in-out;
+        text-shadow: white 0px 0px 5px, white 4px 4px 10px;
+    }
+  
+    .link-container.show {
+    }
+  }
+  
+  .link-container > .link:hover {
+    opacity: 30%;
+    transition: opacity .3s ease;
+  }
+  
+  .link-container > .link > a {
+    color: inherit;
+  }
+  
+  .icon-filter {
+    filter: brightness(0) invert(1);
+    transition: filter .5s ease;
+  }
+  
+  .nav-container:hover > a > .logo-span > svg > .icon-filter {
+    filter: brightness(0);
+    transition: filter .5s ease;
+    }
+    
+    .nav-container:hover > a > .logo-span > svg > .icon-filter:hover {
+    filter: brightness(1) contrast(10%);
+    transition: filter .5s ease;
+    }
+    
+    .nav-container > .brand:hover {
+    opacity: 30%;
+    transition: opacity .3s ease;
+    }
+    
+    .footer-container {
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: 0px;
+    }
+    
+    .footer-brand {
+    display: flex;
+    margin-right: auto;
+    margin-left: 20px;
+    padding: 5px;
+    }
+    
+    .footer-links {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 20px;
+    }
+    
+    .footer-link {
+    font-size: .8em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    }
+  
