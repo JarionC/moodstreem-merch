@@ -32,7 +32,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="home-wrapper">
   <div className="nav-container">
     <a href="/" className="brand">
       <span className="logo-span"><Logo></Logo></span>
@@ -63,17 +63,17 @@ class App extends Component {
     <div className="close-btn" onClick={handleMenuClick}>×</div>
     <div className="mobile-link-wrapper">
       <div className="mobile-link-container">
-        <li className="link">
+        <li onClick={handleMenuClick} className="link">
           <Link to={"/store"} >
             Store
           </Link>
         </li>
-        <li className="link">
+        <li onClick={handleMenuClick} className="link">
           <Link to={"/about"} >
             What is MoodStreem?
           </Link>
         </li>
-        <li className="link">
+        <li onClick={handleMenuClick} className="link">
           <Link to={"/contact"} >
             Contact Us
           </Link>
